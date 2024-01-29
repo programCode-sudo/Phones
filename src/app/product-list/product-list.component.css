@@ -1,0 +1,45 @@
+#title{
+  font-size: 5vh;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+}
+
+#container{
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid ;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  --angle: 0deg;
+  border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+  animation: 10s rotate linear infinite;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#scrollable{
+  max-height: calc(25vh - 10px); 
+  overflow-y: auto;
+}
+
